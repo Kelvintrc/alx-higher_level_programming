@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" this module defines a class Square """
+
 class Square:
     """Class Square that defines a square object.
     Private instance attribute: size.
