@@ -47,7 +47,7 @@ class TestBaseMethods(unittest.TestCase):
     def test_string_id(self):
         """ Test string id """
         new = Base('1')
-        self.assertEqual(new.id, 1)
+        self.assertEqual(new.id, '1')
 
     def test_more_args_id(self):
         """ Test passing more args to init method """
@@ -57,7 +57,7 @@ class TestBaseMethods(unittest.TestCase):
     def test_access_private_attrs(self):
         """ Test access to private attributes """
         new = Base()
-        with self.asserRaises(AttributeError):
+        with self.assertRaises(AttributeError):
             new.__nb_objects
 
     def test_save_to_file_1(self):
