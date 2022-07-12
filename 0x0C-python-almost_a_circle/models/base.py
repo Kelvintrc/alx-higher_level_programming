@@ -59,25 +59,6 @@ class Base:
         return new
 
     @classmethod
-    def load_from_file(cls):
-        """ Returns a list of instances """
-        filename = "{}.json".format(cls.__name__)
-
-        if os.path.exists(filename) is False:
-            return []
-
-        with open(filename, "r") as f:
-            list_str = f.read()
-
-        list_cls = cls.from_json_string(list_str)
-        list_ins = []
-
-        for index in range(len(list_cls)):
-            list_ins.append(cls.create(**list_cls[index]))
-
-        return list_ins
-
-    @classmethod
     def save_to_file_csv(cls, list_objs):
         """ Method that saves a CSV file """
         filename = "{}.csv".format(cls.__name__)
@@ -102,6 +83,25 @@ class Base:
         with open(filename, 'w') as writeFile:
             writer = csv.writer(writeFile)
             writer.writerows(matrix)
+
+    @classmethod
+    def load_from_file(cls):
+        """ Returns a list of instances """
+        filename = "{}.json".format(cls.__name__)
+
+        if os.path.exists(filename) is False:
+            return []
+
+        with open(filename, "r") as f:
+            list_str = f.read()
+
+        list_cls = cls.from_json_string(list_str)
+        list_ins = []
+
+        for index in range(len(list_cls)):
+            list_ins.append(cls.create(**list_cls[index]))
+
+        return list_ins
 
     @classmethod
     def load_from_file_csv(cls):
