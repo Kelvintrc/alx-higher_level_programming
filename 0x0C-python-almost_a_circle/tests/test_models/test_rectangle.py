@@ -337,29 +337,29 @@ class TestRectangleMethods(unittest.TestCase):
     def test_create_3(self):
         """ Test create method """
         dictionary = {'id': 89, 'width': 1, 'height': 2}
-        r1 = Rectangle.create(**dictionary)
-        self.assertEqual(r1.id, 89)
-        self.assertEqual(r1.width, 1)
-        self.assertEqual(r1.height, 2)
+        new = Rectangle.create(**dictionary)
+        self.assertEqual(new.id, 89)
+        self.assertEqual(new.width, 1)
+        self.assertEqual(new.height, 2)
 
     def test_create_4(self):
         """ Test create method """
         dictionary = {'id': 89, 'width': 1, 'height': 2, 'x': 3}
-        r1 = Rectangle.create(**dictionary)
-        self.assertEqual(r1.id, 89)
-        self.assertEqual(r1.width, 1)
-        self.assertEqual(r1.height, 2)
-        self.assertEqual(r1.x, 3)
+        new = Rectangle.create(**dictionary)
+        self.assertEqual(new.id, 89)
+        self.assertEqual(new.width, 1)
+        self.assertEqual(new.height, 2)
+        self.assertEqual(new.x, 3)
 
     def test_create_5(self):
         """ Test create method """
         dictionary = {'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4}
-        r1 = Rectangle.create(**dictionary)
-        self.assertEqual(r1.id, 89)
-        self.assertEqual(r1.width, 1)
-        self.assertEqual(r1.height, 2)
-        self.assertEqual(r1.x, 3)
-        self.assertEqual(r1.y, 4)
+        new = Rectangle.create(**dictionary)
+        self.assertEqual(new.id, 89)
+        self.assertEqual(new.width, 1)
+        self.assertEqual(new.height, 2)
+        self.assertEqual(new.x, 3)
+        self.assertEqual(new.y, 4)
 
     def test_load_from_file(self):
         """ Test load JSON file """
