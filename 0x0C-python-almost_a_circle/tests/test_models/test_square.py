@@ -97,6 +97,11 @@ class TestSquareMethods(unittest.TestCase):
         with self.assertRaises(TypeError):
             new = Square(2, 2, "2", 2)
 
+    def test_value_attrs_0(self):
+        """ Trying to pass invalid values """
+        with self.assertRaises(ValueError):
+            new = Square(-1)
+
     def test_value_attrs(self):
         """ Trying to pass invalid values """
         with self.assertRaises(ValueError):
@@ -111,11 +116,6 @@ class TestSquareMethods(unittest.TestCase):
         """ Trying to pass invalid values """
         with self.assertRaises(ValueError):
             new = Square(1, 1, -1)
-
-    def test_value_attrs_3(self):
-        """ Trying to pass invalid values """
-        with self.assertRaises(ValueError):
-            new = Square(-1)
 
     def test_str(self):
         """ Test __str__ return value """
