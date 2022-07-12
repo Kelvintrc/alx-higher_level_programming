@@ -207,6 +207,7 @@ class TestSquareMethods(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as str_out:
             s1.display()
             self.assertEqual(str_out.getvalue(), res)
+
     def test_display_4(self):
         """ Test string printed """
         s1 = Square(3)
