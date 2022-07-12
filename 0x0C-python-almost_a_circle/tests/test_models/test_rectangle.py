@@ -324,15 +324,15 @@ class TestRectangleMethods(unittest.TestCase):
     def test_create(self):
         """ Test create method """
         dictionary = {'id': 89}
-        r1 = Rectangle.create(**dictionary)
-        self.assertEqual(r1.id, 89)
+        new = Rectangle.create(**dictionary)
+        self.assertEqual(new.id, 89)
 
     def test_create_2(self):
         """ Test create method """
         dictionary = {'id': 89, 'width': 1}
-        r1 = Rectangle.create(**dictionary)
-        self.assertEqual(r1.id, 89)
-        self.assertEqual(r1.width, 1)
+        new = Rectangle.create(**dictionary)
+        self.assertEqual(new.id, 89)
+        self.assertEqual(new.width, 1)
 
     def test_create_3(self):
         """ Test create method """
