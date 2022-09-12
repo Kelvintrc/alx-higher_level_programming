@@ -6,8 +6,6 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 from relationship_city import City, Base
 
-Base = declarative_base()
-
 
 class State(Base):
     """Class State"""
